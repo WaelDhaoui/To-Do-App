@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 71vh;
+    background-color: #eee;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.container {
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 260px;
+    padding-top: 8%;
+}
+.content {
+    margin: 0 auto;
+    width: 27%;
+}
+@media (max-width: 767px) {
+    .content {
+        width: 80%;
+        position: relative;
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2 {
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-size: xx-large;
+    color: white;
+}
+header .mode {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+}
+.mode img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .1s;
+}
+.mode .inactive {
+    transform: translateX(22px);
+}
+form {
+    margin: 7% 0 5%;
+}
+input[type="text"] {
+    width: 100%;
+    height: 27px;
+    padding: 4%;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+} 
+@media (max-width: 767px) {
+    input[type="text"] {
+        height: 35px;
+        font-size: 23px;
+    }
+}
+input[type="submit"] {
+    visibility: hidden;
+    position: absolute;
+}
+.content > ul {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0px 7px 12px 2px #eee;
+    min-height: 44px;
+    background-color: white;
+}
+.content > ul li {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 3%;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .content > ul li {
+        padding: 6% 5%;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        position: relative;
+        height: 8vh;
+    }
+}
+.content > ul li img:first-child {
+    background-image: linear-gradient(to bottom right, #B861EE, #71A5FB);
+    padding: 1%;
+    border-radius: 50%;
+    margin-right: 6%;
+    visibility: hidden;
+}
+.content > ul .done img:first-child {
+    visibility: visible;
+}
+.content > ul li p {
+    position: relative;
+    color: #504f5f;
+}
+@media (max-width: 767px) {
+    .content > ul li p {
+        font-size: 20px;
+    }
+}
+.content > ul li p::before {
+    content: "";
+    padding: 3px;
+    border-radius: 50%;
+    margin-right: 6%;
+    position: absolute;
+    border: 1px solid #c6c6c6;
+    width: 10px;
+    height: 10px;
+    left: -42px;
+    background-color: white;
+}
+@media (max-width: 767px) {
+    .content > ul li p::before {
+        left: -32px;
+    }
+}
+.content > ul .done p {
+    color: #cbcbcb;
+}
+.content > ul .done p::before {
+    visibility: hidden;
+}
+.content > ul .done p::after {
+    content: '';
+    background-color: #cbcbcb;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: -7px;
+    top: 57%;
+}
+.content > ul li p::first-letter {
+    text-transform: uppercase;
+}
+.content > ul li img:last-child {
+    width: 18px;
+    background-color: #e6e6e6;
+    padding: 1%;
+    border-radius: 50%;
+    visibility: hidden;
+    position: absolute;
+    right: 4%;
+}
+.content > ul li:hover img:last-child {
+    visibility: visible;
+}
+footer {
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 1px 8px 0px #eee;
+}
+footer p {
+    font-size: smaller;
+    cursor: pointer;
+    transition: .3s;
+    color: #c0c0c0;
+    font-weight: bold;
+}
+footer > p:first-of-type {
+    flex-basis: 18%;
+    cursor: context-menu;
+}
+@media (max-width: 767px) {
+    footer > p:first-of-type {
+        flex-basis: 38%;
+    }
+}
+footer div {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 41%;
+}
+@media (max-width: 767px) {
+    footer div {
+        justify-content: space-evenly;
+        position: absolute;
+        top: 109%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: white;
+        padding: 3%;
+        border-radius: 8px;
+    }
+}
+footer div p:not(p.active, :first-of-type):hover,
+footer > p:not(:first-of-type):hover {
+    color: #424453;
+    font-weight: bold;
+}
+footer .active {
+    color: #4c83e0;
+    font-weight: bold;
+}
