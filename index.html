@@ -10,28 +10,28 @@
 
     <title>Frontend Mentor | Todo app</title>
     <style>
-        .attribution { font-size: 11px; text-align: center; position:relative; top: 100%;}
-        .attribution a { color: hsl(228, 45%, 44%); }
+        footer { font-size: 11px; text-align: center; position:relative; top: 100%;}
+        footer a { color: hsl(228, 45%, 44%); }
     </style>
 </head>
 <body>
-    <div class="container">
+    <main>
         <div class="content">
-            <header>
+            <div class="head" role="banner">
                 <h2>todo</h2>
                 <div class="mode">
-                    <img src="images/icon-moon.svg" alt="moon.svg">
-                    <img src="images/icon-sun.svg" alt="sun.svg" class="inactive">
+                    <img src="images/icon-moon.svg" alt="moon.svg" class="inactive">
+                    <img src="images/icon-sun.svg" alt="sun.svg" >
                 </div>
-            </header>
-            <form action="">
+            </div>
+            <form action="index.html">
                 <input type="text" maxlength="20">
                 <input type="submit" value="add">
             </form>
             <ul>
                 
             </ul>
-            <footer>
+            <div class="list" role="contentinfo">
                 <p></p>
                 <div>
                     <p class="active">All</p>
@@ -39,10 +39,10 @@
                     <p>Completed</p>
                 </div>
                 <p>Clear all</p>
-            </footer>
+            </div>
         </div>
-    </div>
-    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+    </main>
+    <footer>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</footer>
     <script src="main.js"></script>
 </body>
 </html>

@@ -21,7 +21,7 @@ newLi.append(newImg2);
 // moon & sun 
 let mode = document.querySelector(".mode");
 let list = document.querySelector("ul");
-let footer = document.querySelector("footer");
+let footer = document.querySelector(".list");
 
 mode.addEventListener("click", function() {
     [...this.children].forEach(function(e){

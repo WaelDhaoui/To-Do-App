@@ -5,14 +5,14 @@
 }
 body {
     height: 71vh;
-    background-color: #eee;
+    background-color: #181824;
 }
 ul {
     list-style: none;
     display: flex;
 }
 
-.container {
+main {
     background-image: url(../images/bg-desktop-light.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +22,7 @@ ul {
 }
 .content {
     margin: 0 auto;
-    width: 27%;
+    width: 34%;
 }
 @media (max-width: 767px) {
     .content {
@@ -30,18 +30,18 @@ ul {
         position: relative;
     }
 }
-header {
+.head {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header h2 {
+.head h2 {
     text-transform: uppercase;
     letter-spacing: 9px;
     font-size: xx-large;
     color: white;
 }
-header .mode {
+.head .mode {
     width: 20px;
     height: 20px;
     overflow: hidden;
@@ -173,7 +173,7 @@ input[type="submit"] {
 .content > ul li:hover img:last-child {
     visibility: visible;
 }
-footer {
+.list {
     display: flex;
     align-items: center;
     padding: 3%;
@@ -181,29 +181,29 @@ footer {
     background-color: white;
     box-shadow: 0px 1px 8px 0px #eee;
 }
-footer p {
+.list p {
     font-size: smaller;
     cursor: pointer;
     transition: .3s;
     color: #c0c0c0;
     font-weight: bold;
 }
-footer > p:first-of-type {
+.list > p:first-of-type {
     flex-basis: 18%;
     cursor: context-menu;
 }
 @media (max-width: 767px) {
-    footer > p:first-of-type {
+    .list > p:first-of-type {
         flex-basis: 38%;
     }
 }
-footer div {
+.list div {
     display: flex;
     justify-content: space-between;
     flex-basis: 41%;
 }
 @media (max-width: 767px) {
-    footer div {
+    .list div {
         justify-content: space-evenly;
         position: absolute;
         top: 109%;
@@ -215,12 +215,12 @@ footer div {
         border-radius: 8px;
     }
 }
-footer div p:not(p.active, :first-of-type):hover,
-footer > p:not(:first-of-type):hover {
+.list div p:not(p.active, :first-of-type):hover,
+.list > p:not(:first-of-type):hover {
     color: #424453;
     font-weight: bold;
 }
-footer .active {
+.list .active {
     color: #4c83e0;
     font-weight: bold;
 }
